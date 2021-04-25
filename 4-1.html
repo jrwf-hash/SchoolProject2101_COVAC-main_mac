@@ -92,9 +92,9 @@
 									<select id="day" name="dd"></select>
 								</div>
 								<div class="info_item">
-									<input type="radio" id="man" name="man" value="남" checked />
+									<input type="radio" id="man" name="gender" value="남" onclick="checkOnlyOne(this)" />
 									<label for="man">남</label>
-									<input type="radio" id="woman" name="woman" value="여" />
+									<input type="radio" id="woman" name="gender" value="여" onclick="checkOnlyOne(this)"/>
 									<label for="woman">여</label>
 								</div>
 								<div class="info_item phone_wrapper">
@@ -124,6 +124,18 @@
 			</footer>
 		</div>
 		<script type="text/javascript">
+
+		function checkOnlyOne(element) {
+
+  const checkboxes
+      = document.getElementsByName("gender");
+
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+
+  element.checked = true;
+}
 			$(document).ready(function () {
 				/****************** set Navigation ******************/
 
