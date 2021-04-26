@@ -109,9 +109,17 @@ button:focus {
 	-webkit-box-align: start;
 	-ms-flex-align: start;
 	align-items: flex-start;
+	/*
 	-webkit-transform: translateX(-10%);
 	-ms-transform: translateX(-10%);
 	transform: translateX(-10%);
+	*/
+
+	-webkit-transform: translateX(-5%);
+	-ms-transform: translateX(-5%);
+	transform: translateX(-5%);
+
+
 }
 #main .main_content_wrapper article {
 	text-align: center;
@@ -132,9 +140,10 @@ button:focus {
 #nav {
 	margin-right: 70px;
 	width: 240px;
+
 	background-color: #fff;
 	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: 2px 2px 5px 0pxrgba (0, 0, 0, 0.2);
+	-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
 	-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -145,8 +154,8 @@ button:focus {
 #nav ul li:hover {
 	cursor: pointer;
 	text-decoration: none;
-
 }
+
 #nav ul li div,
 #nav ul li a {
 	color: #545454;
@@ -503,6 +512,64 @@ Layer 3
 /*   Check out the fancy shadow  on this one */
 
 }
+
+.dropdown_grid{
+	display: grid;
+	width: 810px;
+	grid-template-columns: 2fr 1fr 1fr;
+
+	justify-items: start;
+}
+
+.dropbtn {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 10px 8px 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown1 {
+
+}
+.dropdown2 {
+
+}
+.dropdown3 {
+
+}
+
+.dropdown-content {
+
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  max-width: 100px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+
+	text-align: left;
+  color: black;
+  padding-top: 8px;
+	padding-bottom: 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.show {display: block;}
 /*************** pie chart *******************/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -648,40 +715,6 @@ Layer 3
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	padding: 30px;
 	margin: 43px 0px 43px 63px;
-}
-
-#dropdown_button1{ /* 전체 버튼*/
- width: 109px;
- height: 40px;
- /* margin: 0 373px 54px 21px; */
- padding: 9px 12px 9px 13px;
- float: left;
-}
-#dropdown_button2{ /*백신 버튼*/
-	width: 109px;
-	height: 40px;
-	margin: 0 0px 0px 550px;
-	padding: 9px 12px 9px 13px;
-}
-#dropdown_button3{ /*기간 버튼*/
-	width: 109px;
-  height: 40px;
-  margin: 0px 0px 0px 700px;
-  padding: 9px 12px 9px 13px;
-	/* float: right; */
-	position: absolute;
-	top: 56%;
-	left: 30%;
-	transform: translate(-10%, -35%);
-}
-
-.dropdown-menu{
-	display: none;
-	position: absolute;
-}
-
-.dropdown-menu a{
-	right: 320px;
 }
 
 .circle{ /*누적 현황 빨간색 원*/
@@ -1059,6 +1092,16 @@ div.announce_1_title{
 
 #linkin_text:visited{
 	text-decoration: none;
+}
+
+#linkin_text:hover{
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+#linkin_text{
+	color: #ffffff;
+
 }
 
 /**************check_vac 백신 종류별 특성**************/
