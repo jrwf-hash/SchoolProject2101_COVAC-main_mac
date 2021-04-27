@@ -570,6 +570,59 @@ Layer 3
 .dropdown-content a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+#dropdown_button1{ /* 전체 버튼*/
+	/*
+	width: 109px;
+  height: 40px;
+  /* margin: 0 373px 54px 21px; */
+	/*
+  padding: 9px 12px 9px 13px;
+  float: left;
+	*/
+
+}
+#dropdown_button2{ /*백신 버튼*/
+	/*
+	width: 109px;
+	height: 40px;
+	margin: 0 0px 0px 550px;
+	padding: 9px 12px 9px 13px;
+	*/
+}
+#dropdown_button3{ /*기간 버튼*/
+	/*
+	width: 109px;
+  height: 40px;
+  margin: 0px 0px 0px 700px;
+  padding: 9px 12px 9px 13px;
+	*/
+	/* float: right; */
+	/*
+	position: absolute;
+	top: 56%;
+	left: 30%;
+	transform: translate(-10%, -35%);
+	*/
+}
+.btn-vac{
+	background-color: #6ea14e;
+	color: #ffffff;
+}
+.btn-vac:hover{
+	color: #ffffff;
+}
+.btn-vac:active{
+	border: none;
+}
+
+.dropdown-item{
+
+}
+.dropdown-menu{
+	color: #4caf50;
+}
+
 /*************** pie chart *******************/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -874,7 +927,7 @@ Layer 3
 	border-radius: 8px;
 	font-size: 18px;
 	padding: 2px 5px;
-	margin-left: 720px;
+	margin-left: 760px;
 }
 
 /**************************** 4-2.html ***************************************/

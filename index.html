@@ -12,41 +12,25 @@
 		/>
 
 		<title>COVAC</title>
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+		<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="./css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="./style.css" />
-		<!--지도 -->
-		<link rel="stylesheet" type="text/css" href="./map/style.css" />
-		<!--지도-->
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-
-	<!--세로그래프 script-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script language="javascript">
-
-		window.onload = function(){
-			for (i=1; i<17; i++) {
-				if ('<%=request("req")%>'==exx[i]) {
-					cMuName = 'mus'+i;
-					document [cMuName].src = eval(cMuName + 'on.src');
-					onclick=smenu_click(cMuName);
+		<!--세로그래프 script-->
+		<script src="./css/Chart.min.js"></script>
+		<script src="./css/bootstrap.min.js"></script>
+		<script src="./css/poppers.min.js"></script>
+	  <script src="./css/jquery.min.js"></script>
+		<script src="./css/bootstrap.min.js"></script>
+		<script language="javascript">
+			window.onload = function(){
+				for (i=1; i<17; i++) {
+					if ('<%=request("req")%>'==exx[i]) {
+						cMuName = 'mus'+i;
+						document [cMuName].src = eval(cMuName + 'on.src');
+						onclick=smenu_click(cMuName);
+					}
 				}
 			}
-		}
-
 		</script>
 	</head>
 
@@ -151,38 +135,43 @@
 							<h3>백신 접종 현황</h3>
 							<!-- Example single danger button -->
 							<!--첫번째 버튼 전체 -->
-							<div id="dropdown_button1" class="container">
+							<div class="dropdown_grid">
+								<div id="dropdown_button1" class="container">
+									<div class="btn-group">
+										<button type="button" class="btn btn-success">전체</button>
+										<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">Link 1</a>
+											<a class="dropdown-item" href="#">Link 2</a>
+										</div>
+									</div>
+								</div>
+							<!--두번째 버튼 백신 -->
+								<div id="dropdown_button2" class="container">
+									<div class="btn-group">
+										<button type="button" class="btn btn-vac dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												백신
+											</button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">화이자</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#">아스트라제네카</a>
+										</div>
+									</div>
+								</div>
+								<!--세번째 버튼 기간 -->
+								<div id="dropdown_button3" class="container">
 								<div class="btn-group">
-									<button type="button" class="btn btn-success">전체</button>
+									<button type="button" class="btn btn-success">기간</button>
 									<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Link 1</a>
 										<a class="dropdown-item" href="#">Link 2</a>
 									</div>
 								</div>
-							</div>
-						<!--두번째 버튼 백신 -->
-							<div id="dropdown_button2" class="container">
-								<div class="btn-group">
-									<button type="button" class="btn btn-success">백신</button>
-									<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Link 1</a>
-										<a class="dropdown-item" href="#">Link 2</a>
-									</div>
 								</div>
 							</div>
-							<!--세번째 버튼 기간 -->
-							<div id="dropdown_button3" class="container">
-							<div class="btn-group">
-								<button type="button" class="btn btn-success">기간</button>
-								<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Link 1</a>
-									<a class="dropdown-item" href="#">Link 2</a>
-								</div>
-							</div>
-							</div>
+
 							<br>
 							<body>
 								<!--Ref
