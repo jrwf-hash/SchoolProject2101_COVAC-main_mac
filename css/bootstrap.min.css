@@ -216,7 +216,7 @@ button {
 
 button:focus {
   outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 button, input, optgroup, select, textarea {
@@ -2688,13 +2688,13 @@ a.btn.disabled, fieldset:disabled a.btn {
 .btn-success {
   color: #fff;
   background-color: #28a745;
-  border-color: #28a745
+  
 }
-
+/*
 .btn-success:hover {
   color: #fff;
   background-color: #218838;
-  border-color: #1e7e34
+  border-color: #1e7e34;
 }
 
 .btn-success.focus, .btn-success:focus {
@@ -2719,7 +2719,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 .btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
   box-shadow: 0 0 0 .2rem rgba(72, 180, 97, .5)
 }
-
+*/
 .btn-info {
   color: #fff;
   background-color: #17a2b8;
@@ -2731,14 +2731,14 @@ a.btn.disabled, fieldset:disabled a.btn {
   background-color: #138496;
   border-color: #117a8b
 }
-
+/*
 .btn-info.focus, .btn-info:focus {
   color: #fff;
   background-color: #138496;
   border-color: #117a8b;
   box-shadow: 0 0 0 .2rem rgba(58, 176, 195, .5)
 }
-
+*/
 .btn-info.disabled, .btn-info:disabled {
   color: #fff;
   background-color: #17a2b8;
@@ -2750,11 +2750,11 @@ a.btn.disabled, fieldset:disabled a.btn {
   background-color: #117a8b;
   border-color: #10707f
 }
-
+/*
 .btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show>.btn-info.dropdown-toggle:focus {
   box-shadow: 0 0 0 .2rem rgba(58, 176, 195, .5)
 }
-
+*/
 .btn-warning {
   color: #212529;
   background-color: #ffc107;
@@ -2978,7 +2978,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
   color: #fff;
   background-color: #28a745;
-  border-color: #28a745
+  border-color: #28a745;
 }
 
 .btn-outline-success:not(:disabled):not(.disabled).active:focus, .btn-outline-success:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-success.dropdown-toggle:focus {

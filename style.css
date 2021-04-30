@@ -1,12 +1,10 @@
 /********************************* FONT ***************************************/
 
-@font-face {
-	font-family: "MalgunGothic";
-	font-weight: 500;
-	src: url("./src/font/malgun.woff") format("woff"),
-		url("./src/font/malgun.ttf") format("truetype"),
-		url("./src/font/malgun.otf") format("opentype");
-}
+@font-face { font-family: 'NanumBarunGothic';
+src: url('/fonts/NanumBarunGothic.eot');
+src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+url('/fonts/NanumBarunGothic.woff') format('woff');}
+
 
 /********************************** COMMON ************************************/
 html{
@@ -134,7 +132,7 @@ button:focus {
 .ad_wrapper_mainpage{
 	margin-top: -30px;
 	width: 870px;
-	padding-left: 35px;
+
 }
 
 #nav {
@@ -198,8 +196,7 @@ button:focus {
 
 .board_header,
 .posts_container,
-.write_review_container,
-.submit_info_container {
+.write_review_container{
 	border: 1px solid #959695;
 	border-radius: 10px;
 	padding: 10px;
@@ -742,19 +739,19 @@ Layer 3
 .board_header_box1 { /*세번째 박스 */
 	width: 872px;
 	height: 872px;
-	margin: 43px 0px 0px 73px;
+	margin: 43px 0px 0px 0px;
 	padding: 29px 44px 79px 45px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
 	text-align: center;
-	float: left;
+
 }
 
 #accrue { /*테이블 */
 	background-color: #fff;
 	width: 872px;
   height: 329px;
-  margin: 43px 0 74px 73px;
+  margin: 43px 0 74px 0px;
   padding: 24px 85px 149px 75px;
   box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	float: left;
@@ -777,7 +774,7 @@ Layer 3
 	background: blue;
 	font-size: 15px;
 	text-align: center;
-	font-family: "MalgunGothic", sans-serif, "Roboto";
+	font-family: "NanumBarunGothic", sans-serif, "Roboto";
 	color: white;
 	margin: 0 0 0 0;
 	padding: 0 0 0 1px;
@@ -790,7 +787,7 @@ Layer 3
 	background: red;
 	font-size: 15px;
 	text-align: center;
-	font-family: "MalgunGothic", sans-serif, "Roboto";
+	font-family: "NanumBarunGothic", sans-serif, "Roboto";
 	color: white;
 	margin: 0 0 0 0;
 	padding: 0 0 0 1px;
@@ -886,10 +883,10 @@ Layer 3
 .submit_info_container .info_item input[type="email"] {
 	width: 98%;
 	font-size: 18px;
-	border: 1px solid #959695;
+	border:none;
+	border-bottom : 1px solid #959695;
 	padding: 3px 5px;
-	border-radius: 5px;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 .submit_info_container .info_item {
 	padding: 10px 0;
@@ -900,13 +897,14 @@ Layer 3
 	border: 1px solid #959695;
 	padding: 3px 5px;
 	border-radius: 5px;
+	margin-top: 10px;
 }
 .submit_info_container .info_item input[type="number"] {
 	width: 200px;
 	font-size: 18px;
-	border: 1px solid #959695;
+	border: none;
+	border-bottom: 1px solid #959695;
 	padding: 3px 5px;
-	border-radius: 5px;
 	margin-top: 10px;
 }
 .submit_info_container .info_item.phone_wrapper button,
@@ -918,6 +916,7 @@ Layer 3
 	text-align: left;
 	text-shadow: 0px 1px 0.95px rgba(0, 0, 0, 0.4);
 	padding: 5px 15px;
+	margin-left: 10px;
 	border-radius: 10px;
 }
 
