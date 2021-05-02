@@ -43,6 +43,9 @@
 				</a>
 			</header>
 			<main id="main" class="display_flex_center">
+
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 				<div class="main_content_wrapper">
 					<nav id="nav">
 						<ul class="nav_ul" >
@@ -139,9 +142,10 @@
 							<div class="dropdown_grid">
 								<div id="dropdown_button1" class="container">
 									<div class="btn-group">
-										<button type="button" class="btn btn-success">전체</button>
-										<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
-										<div class="dropdown-menu">
+										<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												전체
+											</button>
+											<div class="dropdown-menu">
 											<a class="dropdown-item" href="#">Link 1</a>
 											<a class="dropdown-item" href="#">Link 2</a>
 										</div>
@@ -150,7 +154,7 @@
 							<!--두번째 버튼 백신 -->
 								<div id="dropdown_button2" class="container">
 									<div class="btn-group">
-										<button type="button" class="btn btn-vac dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												백신
 											</button>
 										<div class="dropdown-menu">
@@ -163,9 +167,10 @@
 								<!--세번째 버튼 기간 -->
 								<div id="dropdown_button3" class="container">
 								<div class="btn-group">
-									<button type="button" class="btn btn-success">기간</button>
-									<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
-									<div class="dropdown-menu">
+									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											기간
+										</button>
+										<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Link 1</a>
 										<a class="dropdown-item" href="#">Link 2</a>
 									</div>
@@ -482,6 +487,26 @@ chart.render();
 		</script>
 		<!--원형그래프-->
 		<script src="canvasjs.min.js"></script>
+		<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 	</body>
 </html>
