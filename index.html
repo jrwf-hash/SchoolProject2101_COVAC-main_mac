@@ -170,11 +170,11 @@
 								<!--세번째 버튼 기간 -->
 								<div id="dropdown_button3" class="container">
 								<div class="btn-group">
-									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
 											기간
 										</button>
 										<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Link 1</a>
+										<a class="dropdown-item"  onclick="changeBtnName()">Link 1</a>
 										<a class="dropdown-item" href="#">Link 2</a>
 									</div>
 								</div>
@@ -504,7 +504,7 @@ chart.render();
 			window.onscroll = function() {scrollFunction()};
 
 			function scrollFunction() {
-			  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+			  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
 			    mybutton.style.display = "block";
 			  } else {
 			    mybutton.style.display = "none";
@@ -516,6 +516,15 @@ chart.render();
 			  document.body.scrollTop = 0;
 			  document.documentElement.scrollTop = 0;
 			}
+			</script>
+
+			<script type="text/javascript">
+				function changeBtnName()  {
+				const btnElement
+					= document.getElementById('btn');
+
+				btnElement.value = "새이름!";
+				}
 			</script>
 	</body>
 </html>
