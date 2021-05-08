@@ -46,6 +46,7 @@ body:lang(ko) {
 	font-family: "MalgunGothic", sans-serif, "Roboto";
 	color: #000;
 	overflow: hidden;
+
 }
 
 div,
@@ -94,12 +95,14 @@ button:focus {
 }
 
 #header {
-	padding: 20px;
+	padding: 10px;
 }
+
 #main {
 	background-color: #ededed;
-	padding: 70px;
+	padding: 20px;
 }
+
 #main .main_content_wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -136,8 +139,9 @@ button:focus {
 }
 
 #nav {
-	margin-right: 70px;
-	width: 240px;
+	margin-left: 200px;
+	margin-right: 0px;
+	width: 200px;
 	background-color: #fff;
 	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
@@ -157,9 +161,9 @@ button:focus {
 #nav ul li a {
 	color: #545454;
 	text-align: center;
-	padding: 30px 0;
+	padding: 25px 0;
 	display: block;
-	font-size: 27px;
+	font-size: 20px;
 	/*메뉴 흰 구분선 추가*/
 	border-bottom: solid 1px #eeeeee;
 }
@@ -214,8 +218,9 @@ button:focus {
 	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
-	padding: 30px;
-	max-width: 870px;
+	padding: 20px;
+	margin-left: 20px;
+	max-width: 700px;
 }
 
 .board_header,
@@ -532,7 +537,7 @@ Layer 3
 #barChart{
 /*   background-color:rgba(255,255,255,0.1); */
   border-radius: 6px;
-
+	margin-top: -20px;
 	margin-left: -10px;
 	width: 500px;
 	height: 500px;
@@ -543,8 +548,8 @@ Layer 3
 
 .dropdown_grid{
 	display: grid;
-	width: 810px;
-	grid-template-columns:  500px 2fr 1fr;
+	width: 650px;
+	grid-template-columns:  3fr 2fr 1fr;
 	justify-items: start;
 }
 
@@ -747,9 +752,9 @@ Layer 3
 }
 
 .board_header_box2 { /*첫번째 박스*/
-	width: 872px;
-  height: 872px;
-  margin: 0px 0px 43px 0px;
+	width: 650px;
+  height: 600px;
+  margin: 0px 0px 30px 0px;
   padding: 36px 60px 64px 60px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
@@ -757,8 +762,8 @@ Layer 3
 }
 
 .board_header_box { /*두번째 박스*/
-	width: 872px;
-	height: 872px;
+	width: 650px;
+	height: 500px;
 	margin: 43px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
@@ -767,8 +772,8 @@ Layer 3
 }
 
 .board_header_box1 { /*세번째 박스 */
-	width: 872px;
-	height: 872px;
+	width: 650px;
+	height: 500px;
 	margin: 43px 0px 0px 0px;
 	padding: 29px 44px 79px 45px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);

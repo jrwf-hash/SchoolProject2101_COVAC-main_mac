@@ -39,7 +39,7 @@
 		<div class="body_container">
 			<header id="header" class="display_flex_center">
 				<a href="index.html">
-					<img src="./src/assets/logo.png" alt="covac_logo" />
+					<img style="zoom:0.8;" src="./src/assets/logo.png" alt="covac_logo" />
 				</a>
 			</header>
 			<main id="main" class="display_flex_center">
@@ -79,7 +79,7 @@
 					<article>
 							<!--지도 html-->
 						<section id="section_container" class="board_header_box2">
-					  	<div style="clear:both; position: relative; z-index: 1; top: -35px; left: 80px; zoom:2;">
+					  	<div style="clear:both; position: relative; z-index: 1; top: -40px; left: 90px; zoom:1.5;">
 	              <a href='./bbs/board.php?bo_table=m101&sca=전남' onfocus='this.blur()' onmouseover=mus_on('mus1') onmouseout=mus_off('mus1') onclick=smenu_click('mus1')>
 								<img src='./map/m061.gif' alt='' border='0' name='mus1' class='list1'></a>
 								<a href='./bbs/board.php?bo_table=m101&sca=전북' onfocus='this.blur()' onmouseover=mus_on('mus2') onmouseout=mus_off('mus2') onclick=smenu_click('mus2')>
@@ -142,42 +142,42 @@
 
 							<!-- bootstrap.min.js -->
 							<!--첫번째 버튼 전체 -->
-							<div class="dropdown_grid">
-								<div id="dropdown_button1" class="container">
-									<div class="btn-group">
-										<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												전체
-											</button>
-											<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Link 1</a>
-											<a class="dropdown-item" href="#">Link 2</a>
-										</div>
-									</div>
+							<div class="dropdown_grid" justified>
+								<div class="dropdown">
+							  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							    전체
+							    <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">구르</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">Another action</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">Something else here</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="separated link">Separated link</a></li>
+							  </ul>
 								</div>
 							<!--두번째 버튼 백신 -->
-								<div id="dropdown_button2" class="container">
-									<div class="btn-group">
-										<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												백신&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-											</button>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">화이자</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">아스트라제네카</a>
-										</div>
-									</div>
-								</div>
+							<div class="dropdown">
+							<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								백신
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="javascript:void(0)" class="dropdown-item" data-value="action">화이자</a></li>
+								<li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">아스트라제네카</a></li>
+							</ul>
+							</div>
 								<!--세번째 버튼 기간 -->
-								<div id="dropdown_button3" class="container">
-								<div class="btn-group">
-									<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-											기간
-										</button>
-										<div class="dropdown-menu">
-										<a class="dropdown-item"  onclick="changeBtnName()">Link 1</a>
-										<a class="dropdown-item" href="#">Link 2</a>
-									</div>
-								</div>
+								<div class="dropdown">
+							  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							    기간
+							    <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">1주</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">2주</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">1달</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="separated link">3달</a></li>
+							  </ul>
 								</div>
 							</div>
 
@@ -191,7 +191,7 @@
 							    <div class="col-md-1"></div>
 							    <div class="col-md-10">
 							      <!--Chart.js Canvas Tag -->
-							      <canvas id="barChart" width="500" height="400"></canvas>
+							      <canvas id="barChart" width="700" height="400"></canvas>
 							    </div>
 							    <div class="col-md-1"></div>
 							  </div>
@@ -298,7 +298,7 @@
 
 							</div>
 
-						    <div id="chartContainer" style="height: 570px; max-width: 920px; margin-top: 30px;"></div>
+						    <div id="chartContainer" style="height: 400px; max-width: 500px; margin-top: 10px; margin-left:50px;"></div>
 					 	</section>
 
 					<div id="accrue" class="table_back">
@@ -525,6 +525,13 @@ chart.render();
 
 				btnElement.value = "새이름!";
 				}
+			</script>
+			<!--드롭다운버튼-->
+			<script type="text/javascript">
+			$(".dropdown-menu li a").click(function(){
+			$(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+			$(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+			});
 			</script>
 	</body>
 </html>
