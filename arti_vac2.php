@@ -78,7 +78,7 @@
           <span><img src="./src/assets/glasses.png" alt="" /></span>
         </div>
       </div>
-	  
+
       <!--기사 구성 부분-->
       <div class="news_container">
 	  <?php
@@ -106,7 +106,7 @@
 				else $i++;
 				}
 		?>
-		
+
         <!--잠깐 보류-->
         <div class="clearfix">
           <button type="button" name="button"></button>
@@ -129,9 +129,13 @@
       </div>
     </div>
   </section>
-  <div class="ad_wrapper">
-    <img src="./src/assets/ad.png" alt="ad" />
-  </div>
+	<div id="footer_section_container">
+		<section>
+			<div class="ad_wrapper_mainpage">
+				<img src="./src/assets/ad.png" width="650"alt="ad" />
+			</div>
+		</section>
+	</div>
 </article>
 				</div>
 			</main>

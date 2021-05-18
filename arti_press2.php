@@ -122,7 +122,7 @@
 									<div class="responsive">
 										<div class="gallery">
 											<a target="_self" href="#">
-											<img 
+											<img
 												 class="cover"
 												 src="./src/assets/pic_arti_1.jpg"
 												 alt="기사1"
@@ -301,8 +301,12 @@
 								</div>
 							</div>
 						</section>
-						<div class="ad_wrapper">
-							<img src="./src/assets/ad.png" alt="ad" />
+						<div id="footer_section_container">
+							<section>
+								<div class="ad_wrapper_mainpage">
+									<img src="./src/assets/ad.png" width="650"alt="ad" />
+								</div>
+							</section>
 						</div>
 					</article>
 				</div>

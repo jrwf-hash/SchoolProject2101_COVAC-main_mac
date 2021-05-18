@@ -22,6 +22,10 @@
 		<script src="./css/poppers.min.js"></script>
 	  <script src="./css/jquery.min.js"></script>
 		<script src="./css/bootstrap.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+
 		<script language="javascript">
 			window.onload = function(){
 				for (i=1; i<17; i++) {
@@ -39,7 +43,7 @@
 		<div class="body_container">
 			<header id="header" class="display_flex_center">
 				<a href="index.html">
-					<img style="zoom:0.8;" src="./src/assets/logo.png" alt="covac_logo" />
+					<img src="./src/assets/logo.png" alt="covac_logo" />
 				</a>
 			</header>
 			<main id="main" class="display_flex_center">
@@ -47,14 +51,14 @@
 				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 				<div class="main_content_wrapper">
-					<nav id="nav">
+					<nav id="nav" >
 						<ul class="nav_ul" >
 							<li><a href="index.html" class="none_low_depth selected" style="text-decoration:none">백신</a></li>
 							<li>
 								<div class="has_low_depth">기사</div>
 								<ul class="low_depth">
-									<li><a href="arti_press2.php">언론사별</a></li>
-									<li><a href="arti_vac2.php">백신별</a></li>
+									<li><a href="arti_press.html">언론사별</a></li>
+									<li><a href="arti_vac.html">백신별</a></li>
 								</ul>
 							</li>
 							<li><a href="4.html" class="none_low_depth" style="text-decoration:none">접종후기</a></li>
@@ -149,10 +153,9 @@
 							    <span class="caret"></span>
 							  </button>
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">구르</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">Another action</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">Something else here</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="separated link">Separated link</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">일별</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">월별</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">누적</a></li>
 							  </ul>
 								</div>
 							<!--두번째 버튼 백신 -->
@@ -173,10 +176,8 @@
 							    <span class="caret"></span>
 							  </button>
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">1주</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">2주</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">1달</a></li>
-							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="separated link">3달</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="action">주간</a></li>
+							    <li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">월간</a></li>
 							  </ul>
 								</div>
 							</div>
@@ -191,7 +192,7 @@
 							    <div class="col-md-1"></div>
 							    <div class="col-md-10">
 							      <!--Chart.js Canvas Tag -->
-							      <canvas id="barChart" width="700" height="400"></canvas>
+							      <canvas id="myChart" width="700" height="400"></canvas>
 							    </div>
 							    <div class="col-md-1"></div>
 							  </div>
@@ -203,7 +204,52 @@
 							    <div class="col-md-1"></div>
 							</div>
 
+							<script>
+							const today = moment();
+							Chart.defaults.global.defaultFontColor = 'grey';
+							Chart.defaults.global.defaultFontSize = 16;
+							Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
+							var canvas = document.getElementById('myChart');
+							var data = {
+							    labels: [
+									moment().subtract(4,"days").format("MM/DD"),
+									moment().subtract(3,"days").format("MM/DD"),
+									moment().subtract(2,"days").format("MM/DD"),
+									moment().subtract(1,"days").format("MM/DD"),
+									moment().format("MM/DD")
+								],
+							    type: "line",
+							    datasets: [
+							        {
+													label: "접종 현황",
+							            data: [ 85126,89253, 31098,4991,110954],
+													fill: true,
+													lineTension: 0.1,
+													backgroundColor: "#6EA24D",
+													borderColor: "#6EA24D", // The main line color
+							        }
+							    ]
+							};
+							var options = {
+								scales: {
+									yAxes: [{
+										ticks: {
+											beginAtZero: true
 
+										}
+									}],
+									xAxes: [{
+								// x축 굵기 수정
+							barPercentage: 0.6
+
+						}]
+								}
+							};
+							var myBarChart = Chart.Bar(canvas,{
+								data:data,
+								options: options
+							});
+					</script>
 						<!--세로 그래프 <script-->
 						<script type="text/javascript">
 							// REf
@@ -231,7 +277,7 @@
 									pointBackgroundColor: "green",
 									pointBorderWidth: 1,
 									pointHoverRadius: 8,
-									pointHoverBackgroundColor: "yellow",
+									pointHoverBackgroundColor: "#d1eac0",
 									pointHoverBorderColor: "green",
 									pointHoverBorderWidth: 2,
 									pointRadius: 4,
@@ -251,14 +297,9 @@
 									xAxes: [{
                 // x축 굵기 수정
             	barPercentage: 0.6
+
             }]
 								}
-								// title: {
-								//   fontSize: 18,
-								//   display: true,
-								//   text: 'I want to believe !',
-								//   position: 'bottom'
-								// }
 							};
 
 							init();
@@ -298,50 +339,52 @@
 
 							</div>
 
-						    <div id="chartContainer" style="height: 400px; max-width: 500px; margin-top: 10px; margin-left:50px;"></div>
+						    <div id="chartContainer" style="padding-left: 60px;height: 400px; max-width: 500px;"></div>
 					 	</section>
-
-					<div id="accrue" class="table_back">
-						<body>
-							<div class="tables_name">
-														  <div class="table_p"><h3>&nbsp;접종 실적 총괄&nbsp;<small>(4.12. 12시 기준)</small></h3></div>
+							<div id="accrue" class="table_back">
+								<body>
+									<div class="tables_name">
+										<div class="table_p"><h3>&nbsp;접종 실적 총괄&nbsp;<small >(5.18. 12시 기준)</small></h3></div>
+									</div>
+								  <div class="container">
+										<table class="table table-bordered">
+						          <thead>
+						            <tr>
+						              <th>구분</th>
+						              <th class="num1">1회차 접종</th>
+						              <th class="num2">2회차 접종</th>
+						            </tr>
+						          </thead>
+									    <tbody>
+									      <tr class="table-success">
+									     <td>당일 누적&nbsp;<div class="circle">A</div>&nbsp;+&nbsp;<div class="circle2">B</div></td>
+									        <td id="num1" style="padding-top:18px;">1,195,342</td>
+									        <td id="num2" style="padding-top:18px;">60,557</td>
+									      </tr>
+									      <tr>
+									        <td>당일 실적&nbsp;<div class="circle">A</div></td>
+									        <td id="num3" style="padding-top:18px;">37,785</td>
+									        <td id="num4" style="padding-top:18px;">25</td>
+									      </tr>
+									      <tr>
+									        <td>전일 누적&nbsp;<div class="circle2">B</div></td>
+									        <td id="num5" style="padding-top:18px;">1,157,557</td>
+									        <td id="num6" style="padding-top:18px;">60,532</td>
+									      </tr>
+									    </tbody>
+								  	</table>
+								  </div>
+								</body>
 							</div>
 
-						  <div class="container">
-								<table class="table table-bordered" style="width:700px">
-		          <thead>
-		            <tr>
-		              <th>구분</th>
-		              <th class="num1">1회차 접종</th>
-		              <th class="num2">2회차 접종</th>
-		            </tr>
-		          </thead>
-						    <tbody>
-						      <tr class="table-success">
-						     <td>당일 누적&nbsp;<div class="circle">A</div>&nbsp;+&nbsp;<div class="circle2">B</div></td>
-						        <td>1,195,342</td>
-						        <td>60,557</td>
-						      </tr>
-						      <tr>
-						        <td>당일 실적&nbsp;<div class="circle">A</div></td>
-						        <td>37,785</td>
-						        <td>25</td>
-						      </tr>
-						      <tr>
-						        <td>전일 누적&nbsp;<div class="circle2">B</div></td>
-						        <td>1,157,557</td>
-						        <td>60,532</td>
-						      </tr>
-						    </tbody>
-						  </table>
-						  </div>
-							</body>
-						</div>
-						<div class="ad_wrapper_mainpage">
-							<img src="./src/assets/ad.png" alt="ad" />
+						<div id="footer_section_container">
+							<section>
+								<div class="ad_wrapper_mainpage">
+									<img src="./src/assets/ad.png" width="650"alt="ad" />
+								</div>
+							</section>
 						</div>
 					</article>
-
 			</main>
 			<footer id="footer">
 				Copyright 2021. 1조 All pictures cannot be copied without permission.
@@ -532,6 +575,23 @@ chart.render();
 			$(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
 			$(this).parents(".dropdown").find('.btn').val($(this).data('value'));
 			});
+			</script>
+			<script type="text/javascript">
+				n =  new Date();
+				y = n.getFullYear();
+				m = n.getMonth() + 1;
+				d = n.getDate();
+				var day = new Date();
+				var weekday = new Array(7);
+				weekday[0] = "일요일";
+				weekday[1] = "월요일";
+				weekday[2] = "화요일";
+				weekday[3] = "수요일";
+				weekday[4] = "목요일";
+				weekday[5] = "금요일";
+				weekday[6] = "토요일";
+				var j = weekday[day.getDay()];
+				document.getElementById("date").innerHTML = "(" + m + "." + d + "." +" 12시 기준"+")";
 			</script>
 	</body>
 </html>

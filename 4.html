@@ -14,7 +14,7 @@
 		<title>COVAC</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<link rel="stylesheet" href="./style.css" />
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 	</head>
 <!--
@@ -79,11 +79,12 @@ COVAC로고 누르면 메인 화면으로 이동하게 링크 기능 추가
 							<div class="posts_container">
 								<table>
 									<colgroup>
-										<col style="width: 100px !important" />
-										<col />
+										<col style="width: 100px"/>
+										<col style="width: 210px"/>
 										<col style="width: 100px" />
-										<col style="width: 130px" />
 										<col style="width: 100px" />
+										<col style="width: 100px" />
+
 									</colgroup>
 									<thead>
 										<tr>
@@ -100,7 +101,7 @@ COVAC로고 누르면 메인 화면으로 이동하게 링크 기능 추가
 											<td>
 												<span class="label_notice">공지</span>
 											</td>
-											<td>[이벤트] 후기 랜덤 추첨 후 상품 증정</td>
+											<td>[이벤트] 후기</td>
 											<td>COVAC</td>
 											<td>2021.03.23</td>
 											<td>23</td>
@@ -187,8 +188,12 @@ COVAC로고 누르면 메인 화면으로 이동하게 링크 기능 추가
 								<a class="bold_arrow" href="#">>></a>
 							</div>
 						</section>
-						<div class="ad_wrapper">
-							<img src="./src/assets/ad.png" alt="ad" />
+						<div id="footer_section_container">
+							<section>
+								<div class="ad_wrapper_mainpage">
+									<img src="./src/assets/ad.png" width="650"alt="ad" />
+								</div>
+							</section>
 						</div>
 					</article>
 				</div>

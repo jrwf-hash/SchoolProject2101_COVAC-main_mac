@@ -9,23 +9,6 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 /********************************** COMMON ************************************/
 html{
 
-
-	/*
-	zoom: 0.9;
- transform: scale(0.9);
- transform-origin: 0 0;
-
- -webkit-transform: scale(0.9);
- -webkit-transform-origin: 0 0;
- -moz-transform: scale(0.9);
- -moz-transform-origin: 0 0;
- -o-transform: scale(0.9);
- -o-transform-origin: 0 0;
-
-
-	transform:scale(0.9);
-	transform-origin: 50% 0%;
-	*/
 }
 
 * {
@@ -125,21 +108,20 @@ button:focus {
 #main .main_content_wrapper article {
 	text-align: center;
 }
-#main .main_content_wrapper article .ad_wrapper {
-	margin-top: 30px;
-}
-#main .main_content_wrapper article .ad_wrapper img {
-	width: 870px;
+
+#footer_section_container{
+	padding: 20px;
+	margin-left: 200px;
+	max-width: 650px;
 }
 
 .ad_wrapper_mainpage{
-	margin-top: -30px;
-	width: 870px;
-
+	padding-top: 20px;
 }
 
 #nav {
-	margin-left: 200px;
+	position: absolute;
+	margin-left: 0px;
 	margin-right: 0px;
 	width: 200px;
 	background-color: #fff;
@@ -219,8 +201,8 @@ button:focus {
 	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	padding: 20px;
-	margin-left: 20px;
-	max-width: 700px;
+	margin-left: 220px;
+	max-width: 650px;
 }
 
 .board_header,
@@ -231,6 +213,7 @@ button:focus {
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 30px;
+
 }
 
 .board_header h1 {
@@ -249,16 +232,21 @@ button:focus {
 	font-size: 18px;
 }
 #footer {
-	font-size: 27px;
+	font-size: 22px;
 	color: #545454;
 	text-align: center;
-	padding: 30px 0px 30px 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 140px;
 	line-height: 35px;
 }
 
 .tables_name{
+	/*fontWeight*/
+	color: #545454;
+	font-weight: 500;
 	font-size: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 /*******************index.html 메인페이지****************/
@@ -318,8 +306,12 @@ Layer 3
 
 .local_values_map{
 	padding-top: 5px;
-  border-radius: 15.5px;
-  background-color: #ffffff;
+  border-radius: 10px;
+  background-color: #d1eac0;
+	font-size: 15px;
+}
+.local_name_map{
+	font-size: 15px;
 }
 
 
@@ -390,8 +382,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 325px;
-	margin-top: 505px;
+  margin-left: 255px;
+	margin-top: 380px;
 	z-index: 2;
 }
 .m63{
@@ -399,8 +391,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 315px;
-	margin-top: 395px;
+  margin-left: 250px;
+	margin-top: 280px;
 	z-index: 3;
 }
 .m55{
@@ -408,8 +400,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 445px;
-	margin-top: 445px;
+  margin-left: 335px;
+	margin-top: 325px;
 	z-index: 4;
 }
 .m33{
@@ -417,8 +409,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 440px;
-	margin-top: 120px;
+  margin-left: 330px;
+	margin-top: 70px;
 	z-index: 5;
 }
 .m41{
@@ -426,8 +418,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 287px;
-	margin-top: 285px;
+  margin-left: 220px;
+	margin-top: 210px;
 	z-index: 6;
 }
 .m31{
@@ -435,8 +427,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 350px;
-	margin-top: 170px;
+  margin-left: 250px;
+	margin-top: 140px;
 	z-index: 7;
 }
 .m50{
@@ -444,8 +436,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 380px;
-	margin-top: 240px;
+  margin-left: 290px;
+	margin-top: 175px;
 	z-index: 8;
 }
 .m54{
@@ -453,8 +445,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 490px;
-	margin-top: 300px;
+  margin-left: 370px;
+	margin-top: 210px;
 	z-index: 9;
 }
 .m64{
@@ -462,8 +454,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 258px;
-	margin-top: 672px;
+  margin-left: 200px;
+	margin-top: 492px;
 	z-index: 10;
 }
 .m02{
@@ -471,8 +463,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 300px;
-	margin-top: 148px;
+  margin-left: 230px;
+	margin-top: 100px;
 	z-index: 11;
 }
 .m32{
@@ -480,8 +472,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 240px;
-	margin-top: 138px;
+  margin-left: 180px;
+	margin-top: 85px;
 	z-index: 12;
 }
 .m42{
@@ -489,8 +481,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 342px;
-	margin-top: 325px;
+  margin-left: 265px;
+	margin-top: 230px;
 	z-index: 13;
 }
 
@@ -499,8 +491,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 280px;
-	margin-top: 475px;
+  margin-left: 220px;
+	margin-top: 345px;
 	z-index: 14;
 }
 .m53{
@@ -508,8 +500,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 470px;
-	margin-top: 375px;
+  margin-left: 365px;
+	margin-top: 280px;
 	z-index: 15;
 }
 .m52{
@@ -517,8 +509,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 545px;
-	margin-top: 418px;
+  margin-left: 420px;
+	margin-top: 300px;
 	z-index: 16;
 }
 .m51{
@@ -526,8 +518,8 @@ Layer 3
 	text-align: center;
 	width: 50px;
   height: 50px;
-  margin-left: 525px;
-	margin-top: 470px;
+  margin-left: 410px;
+	margin-top: 340px;
 	z-index: 17;
 }
 
@@ -603,40 +595,6 @@ Layer 3
 
 .show {display: block;}
 
-#dropdown_button1{ /* 전체 버튼*/
-	/*
-	width: 109px;
-  height: 40px;
-  /* margin: 0 373px 54px 21px; */
-	/*
-  padding: 9px 12px 9px 13px;
-  float: left;
-	*/
-
-}
-#dropdown_button2{ /*백신 버튼*/
-	/*
-	width: 109px;
-	height: 40px;
-	margin: 0 0px 0px 550px;
-	padding: 9px 12px 9px 13px;
-	*/
-}
-#dropdown_button3{ /*기간 버튼*/
-	/*
-	width: 109px;
-  height: 40px;
-  margin: 0px 0px 0px 700px;
-  padding: 9px 12px 9px 13px;
-	*/
-	/* float: right; */
-	/*
-	position: absolute;
-	top: 56%;
-	left: 30%;
-	transform: translate(-10%, -35%);
-	*/
-}
 .btn-vac{
 	background-color: #6ea14e;
 	color: #ffffff;
@@ -764,7 +722,7 @@ Layer 3
 .board_header_box { /*두번째 박스*/
 	width: 650px;
 	height: 500px;
-	margin: 43px 0px 0px 0px;
+	margin: 30px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
@@ -774,7 +732,7 @@ Layer 3
 .board_header_box1 { /*세번째 박스 */
 	width: 650px;
 	height: 500px;
-	margin: 43px 0px 0px 0px;
+	margin: 30px 0px 0px 0px;
 	padding: 29px 44px 79px 45px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
@@ -784,22 +742,22 @@ Layer 3
 
 #accrue { /*테이블 */
 	background-color: #fff;
-	width: 872px;
-  height: 329px;
-  margin: 43px 0 74px 0px;
-  padding: 24px 85px 149px 75px;
-  box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
-	float: left;
-	text-align: center;
+	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	margin-left: 220px;
+	max-width: 650px;
 }
 
 .table_back { /*테이블*/
-	/* width: 872px;
-	height: 329px; */
-	background-color: #fff;
+	width: 650px;
+	height: 300px;
+	margin: 30px 0px 0px 0px;
+	padding: 29px 44px 79px 45px;
 	box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
-	padding: 30px;
-	margin: 43px 0px 43px 63px;
+	background-color: #ffffff;
+	text-align: center;
 }
 
 .circle{ /*누적 현황 빨간색 원*/
@@ -812,7 +770,7 @@ Layer 3
 	font-family: "NanumBarunGothic", sans-serif, "Roboto";
 	color: white;
 	margin: 0 0 0 0;
-	padding: 0 0 0 1px;
+	padding: 5px 0 0 0;
 	display: inline-block;
 }
 .circle2 { /*누적 현황 파란색 원*/
@@ -825,16 +783,17 @@ Layer 3
 	font-family: "NanumBarunGothic", sans-serif, "Roboto";
 	color: white;
 	margin: 0 0 0 0;
-	padding: 0 0 0 1px;
+	padding: 5px 0 0 0;
 	display: inline-block;
 }
 /********************************** 4.html ************************************/
 
 .section_review_posts .posts_container table {
-	font-size: 18px;
+	font-size: 16px;
 	color: #545454;
 	margin: auto;
-	width: 100%;
+	width: 590px;
+	font-size: 16px;
 }
 .section_review_posts .posts_container .post_notice td:nth-of-type(1),
 .section_review_posts .posts_container .post_notice td:nth-of-type(2) {
@@ -912,11 +871,12 @@ Layer 3
 .submit_info_container {
 	text-align: left;
 	font-size: 18px;
+	width:650px;
 }
 .submit_info_container .info_item input[type="text"],
 .submit_info_container .info_item input[type="password"],
 .submit_info_container .info_item input[type="email"] {
-	width: 98%;
+	width: 93%;
 	font-size: 18px;
 	border:none;
 	border-bottom : 1px solid #959695;
@@ -966,7 +926,7 @@ Layer 3
 	border-radius: 8px;
 	font-size: 18px;
 	padding: 2px 5px;
-	margin-left: 760px;
+	margin-left: 550px;
 }
 
 /**************************** 4-2.html ***************************************/
@@ -1016,6 +976,9 @@ Layer 3
 	border-radius: 8px;
 	font-size: 18px;
 	padding: 3px 15px;
+}
+.section_write_review{
+	width: 650px;
 }
 
 /********************************arti_press.html*******************************/
@@ -1079,7 +1042,7 @@ div.gallery:hover {
 
 div.gallery img {
 	width: 100%;
-	height: 266px;
+	height: 200px;
 	object-fit: cover;
 	transition: transform 0.2s;
 }
@@ -1135,13 +1098,13 @@ div.announce_1_title{
 	border-radius: 10px;
 	padding: 10px;
 	text-align: left;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .board_header_ann h1 {
-	color: #2a2a2a;
+	color: #676767;
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 /************announce_2 공지_문의 및 제보, 공지_후원 정보***********/
@@ -1152,7 +1115,7 @@ div.announce_1_title{
 }
 
 .content_container{
-	border: 1px solid #000000;
+
 	border-radius: 10px;
 	padding: 10px;
 	text-align: center;
@@ -1163,8 +1126,9 @@ div.announce_1_title{
 }
 
 .ann_arti{
-	padding-top: 30px;
-	padding-bottom: 30px;
+	color: #444444;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 40px;
 	padding-right: 40px;
 	text-align: center;
@@ -1180,7 +1144,7 @@ div.announce_1_title{
 .board_header_ann_2 h1 {
 	color: #2a2a2a;
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 
@@ -1207,23 +1171,28 @@ div.announce_1_title{
 
 /**************check_vac 백신 종류별 특성**************/
 .vac_info_container{
-	margin-top: 30px;
+	margin-top: 20px;
 	height: 700px;
 	margin-right: -180px;
+	padding-right: 60px;
 }
 
 .vac_info_box{
 	float: left;
 	margin: 5px;
 	width: 40%;
+	height: 350px;
 	border: 1px solid #959695;
 	border-radius: 10px;
 	padding: 10px;
 	text-align: left;
+
 }
 
 .vac_name{
-	font-size: 20px;
+	font-weight: 400;
+	color: #333333;
+	font-size: 18px;
 	text-align: center;
 	border-radius: 8px;
 	background: #9bd377;
@@ -1234,10 +1203,11 @@ div.announce_1_title{
 }
 
 .vac_info_table{
-	height: 290px;
+	height: 260px;
 	border-collapse: collapse;
 	text-align: left;
 	margin-top: 10px;
+	margin-right: 10px;
 }
 
 .vac_info_table tr{
@@ -1254,7 +1224,7 @@ div.announce_1_title{
 .check_place_1{
 	text-align: left;
 	margin-left: 8px;
-	margin-right: 665px;
+	margin-right: 480px;
 	margin-bottom: 8px;
 	border-radius: 8px;
 	padding-top: 8px;
@@ -1267,7 +1237,7 @@ div.announce_1_title{
 .check_place_2{
 	text-align: left;
 	margin-left: 8px;
-	margin-right: 620px;
+	margin-right: 445px;
 	margin-bottom: 8px;
 	border-radius: 8px;
 	padding-top: 8px;
