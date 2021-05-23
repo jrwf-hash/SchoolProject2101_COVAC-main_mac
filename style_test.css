@@ -181,20 +181,21 @@ button:focus {
 }
 
 #nav {
-	position: absolute;
+
 	margin-left: 0px;
 	margin-right: 0px;
-	width: 200px;
+	width: 100%;
 	background-color: #fff;
 	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
 	-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-
-#nav ul li a:hover{
-
+#nav ul li{
+	float: left;
 }
+
+
 
 #nav ul li:hover {
 	cursor: pointer;
@@ -263,7 +264,7 @@ button:focus {
 	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	padding: 20px;
-	margin-left: 220px;
+
 	max-width: 650px;
 }
 
@@ -798,8 +799,7 @@ Layer 3
 	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
-	padding: 20px;
-	margin-left: 220px;
+
 	max-width: 650px;
 }
 
