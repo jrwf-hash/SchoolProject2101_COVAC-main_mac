@@ -6,23 +6,75 @@ src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
 url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 /********************************** Responsive ************************************/
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+
+
 	#nav {
-		position: absolute;
-		margin-left: 0px;
+		position: fixed;
+		z-index: 100;
+		top:0;
 		margin-right: 0px;
-		width: 200px;
-		background-color: #fff;
+		width: 100%;
+
 		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 		-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
 		-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	}
+#nav .nav_ul{
+	position: fixed;
+	top:0;
+	left: 220px;
+	margin-right: 0px;
+	width: 650px;
 
+
+}
+#nav ul li div,
+#nav ul li a {
+	color: #fff;
+	text-align: center;
+	padding: 25px 0;
+	display: block;
+	font-size: 20px;
+	/*메뉴 흰 구분선 추가*/
+	border-bottom: solid 1px #eeeeee;
+}
+#nav ul li div.selected {
+	background-color: #6ea14e;
+
+}
+#nav ul li a.selected {
+	background-color: #6ea14e;
+
+}
 	#nav ul li{
 		float: left;
+		min-width: 130px;
+	}
+#nav .has_low_depth, #nav .none_low_depth{
+	background-color: #fff;
+}
+	#nav ul.low_depth {
+		display: none;
+		max-width: 120px;
+	}
+
+	#nav ul.low_depth li a {
+		background-color: #9bd377;
+	}
+	#nav ul.low_depth li a.selected {
+
+		overflow: visible;
+	}
+	#nav ul.low_depth li a:hover {
+
+		text-decoration: none;
 	}
 
 	#section_container {
+		position: relative;
+		margin-top: 100px;
+
 		background-color: #fff;
 		box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
@@ -31,6 +83,7 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 	}
 
 	.board_header_box2 { /*첫번째 박스*/
+		position: relative;
 		width: 650px;
 	  height: 600px;
 		box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
@@ -39,6 +92,8 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 	}
 
 	.board_header_box { /*두번째 박스*/
+		position: relative;
+
 		width: 650px;
 		height: 500px;
 
@@ -48,6 +103,8 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 	}
 
 	.board_header_box1 { /*세번째 박스 */
+		position: relative;
+
 		width: 650px;
 		height: 500px;
 
@@ -58,6 +115,8 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 	}
 
 	#accrue { /*테이블 */
+		position: relative;
+
 		background-color: #fff;
 		box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
@@ -69,6 +128,7 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 /********************************** COMMON ************************************/
 html{
+	width: 100%;
 
 }
 
@@ -79,6 +139,7 @@ html{
 body {
 	overflow-x: hidden;
 	word-break: normal;
+	width: 100%;
 }
 
 body:lang(ko) {
@@ -185,6 +246,7 @@ button:focus {
 	margin-left: 0px;
 	margin-right: 0px;
 	width: 200px;
+
 	background-color: #fff;
 	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);

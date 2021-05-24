@@ -25,6 +25,20 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+		<script type="text/javascript">
+				var imgArray= new Array();
+				imgArray[0] = "./src/assets/ad1.png";
+				imgArray[1] = "./src/assets/ad2.png";
+				imgArray[2] = "./src/assets/ad3.png";
+				imgArray[3] = "./src/assets/ad4.png";
+
+				window.onload = function()
+				{
+						var imgNum=Math.round(Math.random()*3);
+						var objImg=document.getElementById("introImg");
+						objImg.src=imgArray[imgNum];
+				}
+		</script>
 
 		<script language="javascript">
 			window.onload = function(){
@@ -51,6 +65,7 @@
 				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 				<div class="main_content_wrapper">
+
 					<nav id="nav" >
 						<ul class="nav_ul" >
 							<li><a href="index.html" class="none_low_depth selected" style="text-decoration:none">백신</a></li>
@@ -80,7 +95,7 @@
 							</li>
 						</ul>
 					</nav>
-					<article>
+					<article >
 							<!--지도 html-->
 						<section id="section_container" class="board_header_box2">
 					  	<div style="clear:both; position: relative; z-index: 1; top: -40px; left: 90px; zoom:1.5;">
@@ -378,11 +393,11 @@
 							</div>
 
 						<div id="footer_section_container">
-							<section>
+
 								<div class="ad_wrapper_mainpage">
-									<img src="./src/assets/ad.png" width="650"alt="ad" />
+										<img id="introImg" width="650" alt="ad" src="">
 								</div>
-							</section>
+
 						</div>
 					</article>
 			</main>
@@ -393,6 +408,9 @@
 			</footer>
 		</div>
 		<script type="text/javascript">
+		if(matchMedia("screen and (min-width: 1200px)").matches){
+
+
 			$(document).ready(function () {
 				const handleCommonNavFunction = () => {
 					$("#nav ul li div").removeClass("selected")
@@ -415,6 +433,33 @@
 					$(this).next().slideToggle("slow")
 				})
 			})
+		}else{
+			$(document).ready(function () {
+				const handleCommonNavFunction = () => {
+					$("#nav ul li div").removeClass("selected")
+					$("#nav ul li a").removeClass("selected")
+					$("#nav ul.low_depth").hide()
+				}
+
+				$("#nav ul li a.none_low_depth").click(function () {
+					handleCommonNavFunction()
+					$(this).addClass("selected")
+
+				})
+				$("#nav ul li .has_low_depth").click(function () {
+					handleCommonNavFunction()
+					$(this).addClass("selected")
+					$(this).next().slideToggle("slow")
+
+				})
+				$("#nav ul.low_depth li a").click(function () {
+					$("#nav ul.low_depth li a").removeClass("selected")
+					$(this).addClass("selected")
+					$(this).next().slideToggle("slow")
+
+				})
+			})
+		}
 		</script>
 </div>
 <!--원형 그래프 -->
@@ -593,5 +638,6 @@ chart.render();
 				var j = weekday[day.getDay()];
 				document.getElementById("date").innerHTML = "(" + m + "." + d + "." +" 12시 기준"+")";
 			</script>
+
 	</body>
 </html>
