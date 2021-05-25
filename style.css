@@ -7,8 +7,6 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 /********************************** Responsive ************************************/
 @media (max-width: 1200px) {
-
-
 	#nav {
 		position: fixed;
 		z-index: 100;
@@ -20,39 +18,42 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 		-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	}
 
-#nav .nav_ul{
-	position: fixed;
-	top:0;
-	left: 160px;
-	margin-right: 0px;
-	width: 650px;
-}
+	#nav .nav_ul{
+		position: fixed;
+		top:0;
+		left: 160px;
+		margin-right: 0px;
+		width: 650px;
+	}
 
-#nav ul li div,
-#nav ul li a {
-	color: #fff;
-	text-align: center;
-	padding: 25px 0;
-	display: block;
-	font-size: 20px;
-	/*메뉴 흰 구분선 추가*/
-	border-bottom: solid 1px #eeeeee;
-}
-#nav ul li div.selected {
-	background-color: #6ea14e;
-
-}
-#nav ul li a.selected {
-	background-color: #6ea14e;
-
-}
+	#nav ul li div,
+	#nav ul li a {
+		color: #fff;
+		text-align: center;
+		padding: 25px 0;
+		display: block;
+		font-size: 20px;
+		/*메뉴 흰 구분선 추가*/
+		border-bottom: solid 1px #eeeeee;
+		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
+		-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+	}
+	#nav ul li div.selected {
+		background-color: #6ea14e;
+	}
+	#nav ul li a.selected {
+		background-color: #6ea14e;
+	}
 	#nav ul li{
 		float: left;
 		min-width: 130px;
 	}
-#nav .has_low_depth, #nav .none_low_depth{
-	background-color: #fff;
-}
+
+	#nav .has_low_depth, #nav .none_low_depth{
+		background-color: #fff;
+	}
+
 	#nav ul.low_depth {
 		display: none;
 		max-width: 120px;
@@ -60,6 +61,7 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 	#nav ul.low_depth li a {
 		background-color: #9bd377;
+		font-size: 16px;
 	}
 	#nav ul.low_depth li a.selected {
 		overflow: visible;
@@ -680,7 +682,7 @@ Layer 3
 .dropdown_grid{
 	display: grid;
 	width: 650px;
-	grid-template-columns:  3fr 2fr 1fr;
+	grid-template-columns:  3fr 1.5fr 1fr;
 	justify-items: start;
 }
 

@@ -168,6 +168,7 @@
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="javascript:void(0)" class="dropdown-item" data-value="something else here">종합</a></li>
 								<li><a href="javascript:void(0)" class="dropdown-item" data-value="action">화이자</a></li>
 								<li><a href="javascript:void(0)" class="dropdown-item" data-value="another action">아스트라제네카</a></li>
 							</ul>
@@ -238,14 +239,12 @@
 									yAxes: [{
 										ticks: {
 											beginAtZero: true
-
 										}
 									}],
 									xAxes: [{
-								// x축 굵기 수정
-							barPercentage: 0.6
-
-						}]
+									// x축 굵기 수정
+									barPercentage: 0.6
+									}]
 								}
 							};
 							var myBarChart = Chart.Bar(canvas,{
@@ -253,83 +252,6 @@
 								options: options
 							});
 					</script>
-						<!--세로 그래프 <script-->
-						<script type="text/javascript">
-							// REf
-							// http://stackoverflow.com/questions/40061862/chart-js-update-bars-of-a-bar-chart
-
-							var canvas = document.getElementById("barChart");
-							var ctx = canvas.getContext('2d');
-							var chartType = 'bar';
-							var myBarChart;
-
-							// Global Options:
-							Chart.defaults.global.defaultFontColor = 'grey';
-							Chart.defaults.global.defaultFontSize = 16;
-
-							var data = {
-								labels: ["03/21", "03/22", "03/23", "03/24", "03/25"],
-								datasets: [{
-									label: "접종 현황",
-									fill: true,
-									lineTension: 0.1,
-									backgroundColor: "#6EA24D",
-									borderColor: "#6EA24D", // The main line color
-									borderCapStyle: 'square',
-									pointBorderColor: "white",
-									pointBackgroundColor: "green",
-									pointBorderWidth: 1,
-									pointHoverRadius: 8,
-									pointHoverBackgroundColor: "#d1eac0",
-									pointHoverBorderColor: "green",
-									pointHoverBorderWidth: 2,
-									pointRadius: 4,
-									pointHitRadius: 10,
-									data: [1000, 800, 700, 550, 480],
-									spanGaps: true,
-								}]
-							};
-
-							var options = {
-								scales: {
-									yAxes: [{
-										ticks: {
-											beginAtZero: true
-										}
-									}],
-									xAxes: [{
-                // x축 굵기 수정
-            	barPercentage: 0.6
-
-            }]
-								}
-							};
-
-							init();
-
-							function init() {
-								// Chart declaration:
-								myBarChart = new Chart(ctx, {
-									type: chartType,
-									data: data,
-									options: options
-								})
-							};
-
-							//     function addDate() {
-							//       myBarChart.data.labels[5] ="2017";
-							//       myBarChart.data.labels[5] ="2018";
-							//       myBarChart.data.datasets[0].data[5] = 500;
-							//       myBarChart.data.datasets[0].data[13] = 600;
-							//       myBarChart.update();
-							//     }
-
-							//     function adjust2016() {
-							//       myBarChart.data.datasets[0].data[11] = 300;
-							//       myBarChart.update();
-							//     }
-						</script>
-
 					</body>
 
 			</section>
