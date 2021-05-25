@@ -96,7 +96,7 @@
 											><input type="checkbox" name="check" value="조선일보" onclick="oneCheckbox(this)"/>
 											조선일보</label
 										>
-										<label
+										<label 
 											><input
 												type="checkbox"
 												name="check"

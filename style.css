@@ -972,7 +972,7 @@ Layer 3
 .news_filter_container .search_wrapper .search {
 	text-align: center;
 	border: none;
-	font-size: 18px;
+	font-size: 16px;
 	max-width: 110px;
 }
 
@@ -1147,6 +1147,7 @@ form.check_news {
 }
 form.check_news label {
 	color: #8f8f8f;
+	font-size: 14px;
 }
 form.check_news label:hover {
 	color: #545454;
