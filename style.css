@@ -15,20 +15,19 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 		top:0;
 		margin-right: 0px;
 		width: 100%;
-
 		box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 		-webkit-box-shadow: 2px 2px 5px 0px rgba (0, 0, 0, 0.2);
 		-moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 	}
+
 #nav .nav_ul{
 	position: fixed;
 	top:0;
-	left: 220px;
+	left: 160px;
 	margin-right: 0px;
 	width: 650px;
-
-
 }
+
 #nav ul li div,
 #nav ul li a {
 	color: #fff;
@@ -63,18 +62,16 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 		background-color: #9bd377;
 	}
 	#nav ul.low_depth li a.selected {
-
 		overflow: visible;
 	}
 	#nav ul.low_depth li a:hover {
-
 		text-decoration: none;
 	}
 
 	#section_container {
 		position: relative;
-		margin-top: 100px;
-
+		margin-top: 90px;
+		left: -60px;
 		background-color: #fff;
 		box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
@@ -93,10 +90,8 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 	.board_header_box { /*두번째 박스*/
 		position: relative;
-
 		width: 650px;
 		height: 500px;
-
 		box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 		background-color: #ffffff;
 		text-align: center;
@@ -104,25 +99,44 @@ url('/fonts/NanumBarunGothic.woff') format('woff');}
 
 	.board_header_box1 { /*세번째 박스 */
 		position: relative;
-
 		width: 650px;
 		height: 500px;
-
 		box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
 		background-color: #ffffff;
 		text-align: center;
-
 	}
 
 	#accrue { /*테이블 */
 		position: relative;
-
+		left: -60px;
 		background-color: #fff;
 		box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
-
 		max-width: 650px;
+	}
+
+	#footer_section_container{
+		position: fixed;
+		padding: 0px;
+		margin-left: 200px;
+		max-width: 650px;
+	}
+
+	.ad_wrapper_mainpage{
+		padding-top: 20px;
+	}
+	.introImg{
+		left: -20px;
+	}
+	#footer{
+		font-size: 22px;
+		color: #545454;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 140px;
+		line-height: 35px;
 	}
 }
 
@@ -232,6 +246,7 @@ button:focus {
 }
 
 #footer_section_container{
+	position: relative;
 	padding: 20px;
 	margin-left: 200px;
 	max-width: 650px;
