@@ -193,9 +193,8 @@ button:focus {
 
 #nav ul li{
 	float: left;
+	display: block;
 }
-
-
 
 #nav ul li:hover {
 	cursor: pointer;
@@ -211,6 +210,7 @@ button:focus {
 	font-size: 20px;
 	/*메뉴 흰 구분선 추가*/
 	border-bottom: solid 1px #eeeeee;
+	float: none;
 }
 #nav ul li div.selected {
 	background-color: #6ea14e;
@@ -219,15 +219,28 @@ button:focus {
 #nav ul li a.selected {
 	background-color: #6ea14e;
 	color: #fff;
+	display: block;
+
 }
 #nav ul.low_depth {
 	display: none;
+	position: absolute;
+	min-width: 70px;
+	float: left;
+	min-width: 160px;
+	z-index: 1;
+
 }
 #nav ul.low_depth li a {
+	float: none;
 	background-color: #9bd377;
+	display: block;
+	text-align: left;
+
 }
 #nav ul.low_depth li a.selected {
 	color: #fff;
+
 }
 #nav ul.low_depth li a:hover {
 	color: #fff;

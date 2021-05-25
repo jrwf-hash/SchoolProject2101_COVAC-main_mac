@@ -1152,7 +1152,10 @@ form.check_news label:hover {
 	color: #545454;
 	font-weight: bold;
 }
+.my_post{
+	margin: 10px;
 
+}
 /**********************기사 부분***********************/
 .news_container {
 	border: 1px solid #959695;
