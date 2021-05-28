@@ -131,7 +131,7 @@
 								<div class="m50" onmouseover=mus_on('mus7') onmouseout=mus_off('mus7')><div class="local_name_map">충북</div><div class="local_values_map">400</div></div>
 								<div class="m54" onmouseover=mus_on('mus8') onmouseout=mus_off('mus8')><div class="local_name_map">경북</div><div class="local_values_map">400</div></div>
 								<div class="m64" onmouseover=mus_on('mus9') onmouseout=mus_off('mus9')><div class="local_name_map">제주</div><div class="local_values_map">400</div></div>
-								<div class="m02" onmouseover=mus_on('mus10') onmouseout=mus_off('mus10')><div class="local_name_map">서울</div><div class="local_values_map">400</div></div>
+								<div id = "8" class="m02" onclick="downFunction()" onmouseover=mus_on('mus10') onmouseout=mus_off('mus10')><div class="local_name_map">서울</div><div class="local_values_map">400</div></div>
 								<div class="m32" onmouseover=mus_on('mus11') onmouseout=mus_off('mus11')><div class="local_name_map">인천</div><div class="local_values_map">400</div></div>
 								<div class="m42" onmouseover=mus_on('mus12') onmouseout=mus_off('mus12')><div class="local_name_map">대전</div><div class="local_values_map">400</div></div>
 								<div class="m62" onmouseover=mus_on('mus13') onmouseout=mus_off('mus13')><div class="local_name_map">광주</div><div class="local_values_map">400</div></div>
@@ -331,9 +331,10 @@ $("#btn2").on("click", function() {
   });
 
 */
-Chart.defaults.global.defaultFontColor = 'grey';
-Chart.defaults.global.defaultFontSize = 16;
-Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
+							Chart.defaults.global.defaultFontColor = 'grey';
+							Chart.defaults.global.defaultFontSize = 16;
+							Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
+
 							const today = moment();
 							var chart_labels = [
 							moment().subtract(4,"days").format("MM/DD"),
@@ -342,7 +343,7 @@ Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
 							moment().subtract(1,"days").format("MM/DD"),
 							moment().format("MM/DD")
 						];
-						
+
 							var rain_dataset = ['20', '40', '60', '32', '7'];
 							var rain_dataset_1 = ['10', '30', '31', '32', '7'];
 							var rain_dataset_2 = ['20', '60', '61', '32', '7'];
@@ -367,6 +368,7 @@ Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
 							        }]
 							    },
 							    options: {
+
 							        scales: {
 							            yAxes: [{
 							                position: "left",
@@ -429,6 +431,14 @@ Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
 							    var data = forecast_chart.config.data;
 
 							    data.datasets[0].data = rain_dataset_6;
+							    data.labels = chart_labels;
+							    forecast_chart.update();
+							});
+							$("#8").click(function() {
+							    var data = forecast_chart.config.data;
+
+							    data.datasets[0].data = rain_dataset_6;
+									data.label = "서울";
 							    data.labels = chart_labels;
 							    forecast_chart.update();
 							});
@@ -518,61 +528,12 @@ Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
 				yghasd@g.shingu.ac.kr
 			</footer>
 		</div>
+		
+		<!--서울 버튼 누르면..-->
 		<script type="text/javascript">
-		if(matchMedia("screen and (max-width: 1200px)").matches){
-
-			$(document).ready(function () {
-				const handleCommonNavFunction = () => {
-					$("#nav ul li div").removeClass("selected")
-					$("#nav ul li a").removeClass("selected")
-					$("#nav ul.low_depth").hide()
-				}
-
-				$("#nav ul li a.none_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-				})
-				$("#nav ul li .has_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-				})
-				$("#nav ul.low_depth li a").click(function () {
-					$("#nav ul.low_depth li a").removeClass("selected")
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-					handleCommonNavFunction()
-
-				})
-			})
-		}else{
-			$(document).ready(function () {
-				const handleCommonNavFunction = () => {
-					$("#nav ul li div").removeClass("selected")
-					$("#nav ul li a").removeClass("selected")
-					$("#nav ul.low_depth").hide()
-				}
-
-				$("#nav ul li a.none_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-
-				})
-				$("#nav ul li .has_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-
-				})
-				$("#nav ul.low_depth li a").click(function () {
-					$("#nav ul.low_depth li a").removeClass("selected")
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-
-				})
-			})
-		}
+			$("#8")
 		</script>
+
 </div>
 <!--원형 그래프 -->
 <script>
@@ -716,13 +677,16 @@ chart.render();
 			  document.body.scrollTop = 0;
 			  document.documentElement.scrollTop = 0;
 			}
+			function downFunction() {
+				document.body.scrollTop = 0;
+ 			 document.documentElement.scrollTop = 550;
+	 		}
 			</script>
 
 			<script type="text/javascript">
 				function changeBtnName()  {
 				const btnElement
 					= document.getElementById('btn');
-
 				btnElement.value = "새이름!";
 				}
 			</script>
