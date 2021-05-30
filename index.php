@@ -462,9 +462,6 @@ $("#btn2").on("click", function() {
 						    <div id="chartContainer" style="padding-left: 60px;height: 400px; max-width: 500px;"></div>
 					 	</section>
 							<div id="accrue" class="table_back">
-								<?php
-								$query = $db->query("select * from Vac_com");
-								?>
 								<body>
                         <?php
                         $query = $db->query("select * from Vac_com limit 0, 1");

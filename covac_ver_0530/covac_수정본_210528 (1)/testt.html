@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>a</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+
+
+</head>
+<body>
+  <main>
+	<section>
+    <div id="footer_section_container">
+		<div class="ad_wrapper_mainpage">
+      <script type="text/javascript">
+          var imgArray= new Array();
+  				imgArray[0] = "./src/assets/ad1.png";
+  				imgArray[1] = "./src/assets/ad2.png";
+  				imgArray[2] = "./src/assets/ad3.png";
+  				imgArray[3] = "./src/assets/ad4.png";
+
+
+  				window.onload = function()
+          {
+              var imgNum=Math.round(Math.random()*3);
+              document.getElementById("introImg").src=imgArray[imgNum];
+          }
+      </script>
+				<img id="introImg" width="650" alt="ad">
+
+		</div>
+
+    </div>
+	</section>
+</main>
+</body>
+</html>
