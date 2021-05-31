@@ -96,11 +96,11 @@ button:focus {
 	-webkit-box-align: start;
 	-ms-flex-align: start;
 	align-items: flex-start;
-	
+
 	-webkit-transform: translateX(-10%);
 	-ms-transform: translateX(-10%);
 	transform: translateX(-10%);
-	
+
 
 	-webkit-transform: translateX(-5%);
 	-ms-transform: translateX(-5%);
@@ -549,12 +549,11 @@ Layer 3
 .dropdown_grid{
 	display: grid;
 	width: 650px;
-	grid-template-columns:  3fr 1.5fr 1fr;
+	grid-template-columns:  3fr 1fr;
 	justify-items: start;
 }
 
 .dropbtn {
-
   background-color: #4CAF50;
   color: white;
   padding: 8px 10px 8px 10px;
@@ -1389,12 +1388,12 @@ div.gallery iframe{
 	#nav ul.low_depth.show3{ display: none; }
 	#nav ul.low_depth li{display:block; float:none; width:100%; }
 	#nav ul.low_depth li a {
-		padding:0; 
+		padding:0;
 		height:50px;
 		background-color: #fff;
 		line-height:50px;
 		font-size: 15px;
-		color:#545454; 
+		color:#545454;
 	}
 	#nav ul.low_depth li a.selected {
 		overflow: visible;
@@ -1413,8 +1412,9 @@ div.gallery iframe{
 		-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
 		max-width: 650px;
-		width:100%; 
+		width:100%;
 	}
+
 
 	.board_header_box2 { /*첫번째 박스*/
 		position: relative;
@@ -1454,8 +1454,8 @@ div.gallery iframe{
 	}
 
 	#footer_section_container{
-		
-		
+
+
 		margin:0 auto;
 		max-width: 650px;
 	}

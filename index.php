@@ -347,16 +347,21 @@ $("#btn2").on("click", function() {
 							moment().subtract(1,"days").format("MM/DD"),
 							moment().format("MM/DD")
 						];
-
-							var rain_dataset = ['20', '40', '60', '32', '7'];
+						<?php
+						$query = $db->query("select * from Graph limit 0, 1");
+						while ($row = $query->fetch()) {
+						?>
+							var rain_dataset = [<?=$row["f1"]?>, '<?=$row["f1"]?>', '<?=$row["f1"]?>', '<?=$row["f1"]?>', '<?=$row["f1"]?>'];
 							var rain_dataset_1 = ['10', '30', '31', '32', '7'];
 							var rain_dataset_2 = ['20', '60', '61', '32', '7'];
 							var rain_dataset_3 = ['40', '10', '60', '32', '7'];
 							var rain_dataset_4 = ['60', '90', '46', '32', '7'];
 							var rain_dataset_5 = ['70', '30', '56', '32', '7'];
 							var rain_dataset_6 = ['20', '50', '26', '32', '7'];
-							var rain_dataset_7 = ['50', '100', '64', '32', '7'];
-
+							var data_seoul = ['50', '100', '64', '32', '7'];
+							<?php
+							 }
+							?>
 							var ctx = document.getElementById("forecast").getContext('2d');
 							var config = {
 							    type: 'bar',
@@ -440,7 +445,7 @@ $("#btn2").on("click", function() {
 							$("#8").click(function() {
 							    var data = forecast_chart.config.data;
 
-							    data.datasets[0].data = rain_dataset_6;
+							    data.datasets[0].data = data_seoul;
 									data.label = "서울";
 							    data.labels = chart_labels;
 							    forecast_chart.update();

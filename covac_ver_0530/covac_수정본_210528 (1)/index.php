@@ -147,47 +147,46 @@
 
 					 	</section>
 						<section id="section_container" class="board_header_box">
-							<!--세로형 막대 그래프-->
+							<!--백신접종현황 그래프-->
 							<div class="tables_name">
 								<h3>백신 접종 현황</h3>
 							</div>
 
-							<!-- bootstrap.min.js -->
 							<!--첫번째 버튼 전체 -->
+							<!-- id값 : 버튼
+								전체
+								0 : 일별
+								1 : 주별
+								2 : 누적 60개
+
+								백신
+								3 : 종합
+								4 : 화이자
+								5 : AZ
+							-->
 							<div class="dropdown_grid" justified>
 								<div class="dropdown">
-							  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    전체
-							    <span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a id="0" href="javascript:void(0)" class="dropdown-item" data-value="action">일별</a></li>
-							    <li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="another action">월별</a></li>
-							    <li><a id="2" href="javascript:void(0)" class="dropdown-item" data-value="something else here">누적</a></li>
-							  </ul>
+								  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    전체
+								    <span class="caret"></span>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								    <li><a id="0" href="javascript:void(0)" class="dropdown-item" data-value="action">일별</a></li>
+								    <li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="another action">주간</a></li>
+								    <li><a id="2" href="javascript:void(0)" class="dropdown-item" data-value="something else here">누적</a></li>
+								  </ul>
 								</div>
-							<!--두번째 버튼 백신 -->
-							<div class="dropdown">
-							<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								백신
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								<li><a id="3" href="javascript:void(0)" class="dropdown-item" data-value="something else here">종합</a></li>
-								<li><a id="4" href="javascript:void(0)" class="dropdown-item" data-value="action">화이자</a></li>
-								<li><a id="5" href="javascript:void(0)" class="dropdown-item" data-value="another action">아스트라제네카</a></li>
-							</ul>
-							</div>
-								<!--세번째 버튼 기간 -->
+								<!--두번째 버튼 백신 -->
 								<div class="dropdown">
-							  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    기간
-							    <span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a id="6" href="javascript:void(0)" class="dropdown-item" data-value="action">주간</a></li>
-							    <li><a id="7" href="javascript:void(0)" class="dropdown-item" data-value="another action">월간</a></li>
-							  </ul>
+									<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										백신
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li><a id="3" href="javascript:void(0)" class="dropdown-item" data-value="something else here">종합</a></li>
+										<li><a id="4" href="javascript:void(0)" class="dropdown-item" data-value="action">화이자</a></li>
+										<li><a id="5" href="javascript:void(0)" class="dropdown-item" data-value="another action">AZ</a></li>
+									</ul>
 								</div>
 							</div>
 
