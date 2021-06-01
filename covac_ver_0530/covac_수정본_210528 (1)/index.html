@@ -41,7 +41,7 @@
 		</script>
 	</head>
 
-	<body onload="showImage()">
+	<body>
 
 		<div class="body_container">
 			<header id="header" class="display_flex_center">
@@ -140,13 +140,13 @@
 								<div class="m52" onmouseover=mus_on('mus15') onmouseout=mus_off('mus15')><div class="local_name_map">울산</div><div class="local_values_map">400</div></div>
 								<div class="m51" onmouseover=mus_on('mus16') onmouseout=mus_off('mus16')><div class="local_name_map">부산</div><div class="local_values_map">400</div></div>
 
-								<!--지도 숫자 값 단위-->
+								<!--지도 숫자 값 단위
 								<div class="measurement">
 									<div class="measurement_wrap">
 										<p style="font-size:14px; font-weight:500;">단위 : 1,000 명</p>
 									</div>
 								</div>
-
+								-->
 							</div>
 
 					 	</section>
@@ -176,7 +176,7 @@
 							  </button>
 							  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							    <li><a id="0" href="javascript:void(0)" class="dropdown-item" data-value="action">일별</a></li>
-									<li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="action">주간</a></li>
+									<li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="another action">월별</a></li>
 							    <li><a id="2" href="javascript:void(0)" class="dropdown-item" data-value="something else here">누적</a></li>
 							  </ul>
 								</div>
@@ -218,97 +218,60 @@
 							</div>
 
 							<script>
-							/*
-							const today = moment();
-							Chart.defaults.global.defaultFontColor = 'grey';
-							Chart.defaults.global.defaultFontSize = 16;
-							Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
-							var canvas = document.getElementById('myChart');
-							var data = {
-							    labels: [
-									moment().subtract(4,"days").format("MM/DD"),
-									moment().subtract(3,"days").format("MM/DD"),
-									moment().subtract(2,"days").format("MM/DD"),
-									moment().subtract(1,"days").format("MM/DD"),
-									moment().format("MM/DD")
-								],
-							    type: "line",
-							    datasets: [
-							        {
-													label: "접종 현황",
-							            data: [ 85126,89253, 31098,4991,110954],
-													fill: true,
-													lineTension: 0.1,
-													backgroundColor: "#6EA24D",
-													borderColor: "#6EA24D", // The main line color
-							        }
-							    ]
-							};
-							var options = {
-								scales: {
-									yAxes: [{
-										ticks: {
-											beginAtZero: true
-										}
-									}],
-									xAxes: [{
-									// x축 굵기 수정
-									barPercentage: 0.6
-									}]
-								}
-							};
-							var myBarChart = Chart.Bar(canvas,{
-								data:data,
-								options: options
-							});
-							*/
-
-
 							Chart.defaults.global.defaultFontColor = 'grey';
 							Chart.defaults.global.defaultFontSize = 16;
 							Chart.defaults.global.defaultFontFamily = "NanumBarunGothic";
 
 							const today = moment();
+							/*누적 60개 이하 지금은 40개 chart_labels 2*/
 							var chart_labels = [
-								/*
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().format("MM/DD")
-							*/
 
-							'03-60',
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
-							moment().subtract(4,"days").format("MM/DD"),
-							moment().subtract(3,"days").format("MM/DD"),
-							moment().subtract(2,"days").format("MM/DD"),
-							moment().subtract(1,"days").format("MM/DD"),
+							/*50*/
+							moment().subtract(49,"days").format("MM/DD"),
+							moment().subtract(48,"days").format("MM/DD"),
+							moment().subtract(47,"days").format("MM/DD"),
+							moment().subtract(46,"days").format("MM/DD"),
+							moment().subtract(45,"days").format("MM/DD"),
+							moment().subtract(44,"days").format("MM/DD"),
+							moment().subtract(43,"days").format("MM/DD"),
+							moment().subtract(42,"days").format("MM/DD"),
+							moment().subtract(41,"days").format("MM/DD"),
+							moment().subtract(40,"days").format("MM/DD"),
+							moment().subtract(39,"days").format("MM/DD"),
+							moment().subtract(38,"days").format("MM/DD"),
+							moment().subtract(37,"days").format("MM/DD"),
+							moment().subtract(36,"days").format("MM/DD"),
+							moment().subtract(35,"days").format("MM/DD"),
+							moment().subtract(34,"days").format("MM/DD"),
+							moment().subtract(33,"days").format("MM/DD"),
+							moment().subtract(32,"days").format("MM/DD"),
+							moment().subtract(31,"days").format("MM/DD"),
+							moment().subtract(30,"days").format("MM/DD"),
+							moment().subtract(29,"days").format("MM/DD"),
+							moment().subtract(28,"days").format("MM/DD"),
+							moment().subtract(27,"days").format("MM/DD"),
+							moment().subtract(26,"days").format("MM/DD"),
+							moment().subtract(25,"days").format("MM/DD"),
+							moment().subtract(24,"days").format("MM/DD"),
+							moment().subtract(23,"days").format("MM/DD"),
+							moment().subtract(22,"days").format("MM/DD"),
+							moment().subtract(21,"days").format("MM/DD"),
+							moment().subtract(20,"days").format("MM/DD"),
+							moment().subtract(19,"days").format("MM/DD"),
+							moment().subtract(18,"days").format("MM/DD"),
+							moment().subtract(17,"days").format("MM/DD"),
+							moment().subtract(16,"days").format("MM/DD"),
+							moment().subtract(15,"days").format("MM/DD"),
+							moment().subtract(14,"days").format("MM/DD"),
+							moment().subtract(13,"days").format("MM/DD"),
+							moment().subtract(12,"days").format("MM/DD"),
+							moment().subtract(11,"days").format("MM/DD"),
+							moment().subtract(10,"days").format("MM/DD"),
+							moment().subtract(9,"days").format("MM/DD"),
+							moment().subtract(8,"days").format("MM/DD"),
+							moment().subtract(7,"days").format("MM/DD"),
+							moment().subtract(6,"days").format("MM/DD"),
+							moment().subtract(5,"days").format("MM/DD"),
 							moment().subtract(4,"days").format("MM/DD"),
 							moment().subtract(3,"days").format("MM/DD"),
 							moment().subtract(2,"days").format("MM/DD"),
@@ -316,46 +279,70 @@
 							moment().format("MM/DD")
 						];
 
-						var chart_labels_1 = [
+							/*월별 2개 chart_labels_1 1
+							- 데이터 y축 값 고정
+							*/
+							var chart_labels_1 = [
+							moment().subtract(2,"months").format("MM"),
+							moment().subtract(1,"months").format("MM"),
+							moment().format("MM")
+						];
 
-						moment().subtract(1,"days").format("MM/DD"),
-						moment().format("MM/DD")
-					];
+							/*일별 최근 5개 chart_labels_2 0 */
+							var chart_labels_2 = [
+							moment().subtract(4,"days").format("MM/DD"),
+							moment().subtract(3,"days").format("MM/DD"),
+							moment().subtract(2,"days").format("MM/DD"),
+							moment().subtract(1,"days").format("MM/DD"),
+							moment().format("MM/DD")
 
-							var rain_dataset = ['20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7'];
-							var rain_dataset_1 = ['100', '30'];
-							var rain_dataset_2 = ['20', '60', '61', '32', '7'];
-							var rain_dataset_3 = ['40', '10', '60', '32', '7'];
-							var rain_dataset_4 = ['60', '90', '46', '32', '7'];
-							var rain_dataset_5 = ['70', '30', '56', '32', '7'];
-							var rain_dataset_6 = ['20', '50', '26', '32', '7'];
-							var rain_dataset_7 = ['50', '100'];
+
+						];
+
+							/*서울 일단 최근 5개, 월별, 일별, 누적,*/
+							var chart_labels_3 = [
+							moment().subtract(4,"days").format("MM/DD"),
+							moment().subtract(3,"days").format("MM/DD"),
+							moment().subtract(2,"days").format("MM/DD"),
+							moment().subtract(1,"days").format("MM/DD"),
+							moment().format("MM/DD")
+						];
+
+							/*누적 labels accum, 월별 1 monthly, 일별 2 daily,*/
+							var vac_daily = ['10', '30', '61', '32', '7'];
+							var vac_monthly = ['30', '60', '30', '32', '7'];
+							var vac_accum = ['20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7','20', '40', '60', '32', '7'];
+							var vac_total = ['40', '10', '60', '32', '7'];
+							var vac_pz = ['60', '90', '46', '32', '7'];
+							var vac_az = ['70', '30', '56', '32', '7'];
 
 							var ctx = document.getElementById("forecast").getContext('2d');
 							var config = {
 									type: 'bar',
+									axisY:{
+										viewportMinimum:0
+									},
 									data: {
-											labels: chart_labels_1,
+											labels: chart_labels_2,
 											datasets: [ {
 													type: 'bar',
 													label: "접종 현황",
 													yAxisID: "y-axis-1",
 													backgroundColor: "#6EA24D",
-													data: rain_dataset,
+													data: vac_daily,
 											}]
 									},
 									options: {
-
 											scales: {
 													yAxes: [{
 															position: "left",
 															"id": "y-axis-1",
+															viewportMinimum:0
 													}],
 													xAxes: [{
-													// x축 굵기 수정
-													barPercentage: 1,
-
-
+															// x축 굵기 수정
+															barPercentage: 1,
+															minimum:0
 													}]
 											}
 									}
@@ -363,61 +350,52 @@
 
 
 							var forecast_chart = new Chart(ctx, config);
+
+							/*일별*/
 							$("#0").click(function() {
 									var data = forecast_chart.config.data;
-									data.datasets[0].data = rain_dataset;
-									data.labels = chart_labels;
+									data.datasets[0].data = vac_daily;
+									data.labels = chart_labels_2;
 									forecast_chart.update();
 							});
+
+							/*월별*/
 							$("#1").click(function() {
 									var data = forecast_chart.config.data;
-									data.datasets[0].data = rain_dataset;
-									data.labels = chart_labels;
+									data.datasets[0].data = vac_monthly;
+									data.labels = chart_labels_1;
 									forecast_chart.update();
 							});
+
+							/*누적*/
 							$("#2").click(function() {
 									var data = forecast_chart.config.data;
-									data.datasets[0].data = rain_dataset_1;
-									data.labels = chart_labels_1;
+									data.datasets[0].data =  vac_accum;
+									data.labels = chart_labels;
 									forecast_chart.update();
 							});
 
 							$("#3").click(function() {
 									var data = forecast_chart.config.data;
-									data.datasets[0].data = rain_dataset_2;
-									data.labels = chart_labels;
+									data.datasets[0].data = vac_total;
+									data.labels = chart_labels_2;
 									forecast_chart.update();
 							});
 							$("#4").click(function() {
 									var data = forecast_chart.config.data;
-									data.datasets[0].data = rain_dataset_3;
-									data.labels = chart_labels;
+									data.datasets[0].data = vac_pz;
+									data.labels = chart_labels_2;
 									forecast_chart.update();
 							});
 							$("#5").click(function() {
 									var data = forecast_chart.config.data;
-
-									data.datasets[0].data = rain_dataset_4;
-									data.labels = chart_labels;
+									data.datasets[0].data = vac_az;
+									data.labels = chart_labels_2;
 									forecast_chart.update();
 							});
-							$("#6").click(function() {
-									var data = forecast_chart.config.data;
 
-									data.datasets[0].data = rain_dataset_5;
-									data.labels = chart_labels;
-									forecast_chart.update();
-							});
-							$("#7").click(function() {
-									var data = forecast_chart.config.data;
-
-									data.datasets[0].data = rain_dataset_6;
-									data.labels = chart_labels;
-									forecast_chart.update();
-							});
 							$("#8").click(function() {
 									var data = forecast_chart.config.data;
-
 									data.datasets[0].data = rain_dataset_6;
 									data.label = "서울";
 									data.labels = chart_labels;
@@ -433,7 +411,7 @@
  						<section id="section_container" class="board_header_box1">
 						 	<!--원형 그래프-->
 							<div class="tables_name">
-								<h3>지역별 백신 접종 현황</h3>
+								<h3>나라별 백신 접종 현황</h3>
 
 							</div>
 

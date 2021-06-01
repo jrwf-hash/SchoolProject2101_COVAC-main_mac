@@ -143,6 +143,11 @@
 								<div class="m53" onmouseover=mus_on('mus14') onmouseout=mus_off('mus14')><div class="local_name_map">대구</div><div class="local_values_map">400</div></div>
 								<div class="m52" onmouseover=mus_on('mus15') onmouseout=mus_off('mus15')><div class="local_name_map">울산</div><div class="local_values_map">400</div></div>
 								<div class="m51" onmouseover=mus_on('mus16') onmouseout=mus_off('mus16')><div class="local_name_map">부산</div><div class="local_values_map">400</div></div>
+								<div class="measurement">
+									<div class="measurement_wrap">
+										<p style="font-size:14px; font-weight:500;">단위 : 1,000 명</p>
+									</div>
+								</div>
 							</div>
 
 					 	</section>
@@ -172,7 +177,7 @@
 								  </button>
 								  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 								    <li><a id="0" href="javascript:void(0)" class="dropdown-item" data-value="action">일별</a></li>
-								    <li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="another action">주간</a></li>
+								    <li><a id="1" href="javascript:void(0)" class="dropdown-item" data-value="another action">월별</a></li>
 								    <li><a id="2" href="javascript:void(0)" class="dropdown-item" data-value="something else here">누적</a></li>
 								  </ul>
 								</div>

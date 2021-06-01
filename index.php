@@ -29,6 +29,7 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.0/moment.min.js"></script>
+		<script type="text/javascript" src="init.js"></script>
 
 
 		<script language="javascript">
@@ -149,7 +150,7 @@
 										<p style="font-size:14px; font-weight:500;">단위 : 1,000 명</p>
 									</div>
 								</div>
-								
+
 							</div>
 
 					 	</section>

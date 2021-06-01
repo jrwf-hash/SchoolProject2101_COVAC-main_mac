@@ -24,6 +24,8 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="init.js"></script>
+
 </head>
   <body>
     <div id="body_container">
@@ -147,33 +149,7 @@
 			</footer>
 
 		</div>
-<!--메뉴바 js-->
-		<script type="text/javascript">
-			$(document).ready(function () {
-				const handleCommonNavFunction = () => {
-					$("#nav ul li div").removeClass("selected")
-					$("#nav ul li a").removeClass("selected")
-					$("#nav ul.low_depth").hide()
-				}
 
-				$("#nav ul li a.none_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-				})
-				$("#nav ul li .has_low_depth").click(function () {
-					handleCommonNavFunction()
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-				})
-				$("#nav ul.low_depth li a").click(function () {
-					$("#nav ul.low_depth li a").removeClass("selected")
-					$(this).addClass("selected")
-					$(this).next().slideToggle("slow")
-				})
-			})
-		</script>
-    <!--기사 선택 js-->
-  </script>
   <!--기사 선택 js-->
   <script src="http://code.jquery.com/jquery-latest.min.js">
 
