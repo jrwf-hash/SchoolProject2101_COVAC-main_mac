@@ -143,11 +143,13 @@
 								<div class="m53" onmouseover=mus_on('mus14') onmouseout=mus_off('mus14')><div class="local_name_map">대구</div><div class="local_values_map">400</div></div>
 								<div class="m52" onmouseover=mus_on('mus15') onmouseout=mus_off('mus15')><div class="local_name_map">울산</div><div class="local_values_map">400</div></div>
 								<div class="m51" onmouseover=mus_on('mus16') onmouseout=mus_off('mus16')><div class="local_name_map">부산</div><div class="local_values_map">400</div></div>
+								<!-- 지도 단위
 								<div class="measurement">
 									<div class="measurement_wrap">
 										<p style="font-size:14px; font-weight:500;">단위 : 1,000 명</p>
 									</div>
 								</div>
+							-->
 							</div>
 
 					 	</section>
@@ -458,11 +460,6 @@
 							    </div>
 								</section>
 							</div>
-
-							<!--서울 버튼 누르면..-->
-							<script type="text/javascript">
-								$("#8")
-							</script>
 
 					</article>
 			</div>

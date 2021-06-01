@@ -19,17 +19,6 @@
 		<script type="text/javascript" src="init.js"></script>
 
 	</head>
-<!--
-공지_문의 및 제보
-UPDATES
-210416
-COVAC로고 누르면 메인 화면으로 이동하게 링크 기능 추가
-(아직 메인페이지 안만들어서 제대로 넘어가지는 않음)
-
-접종후기 링크 연결
-글쓰기 누르면 4-2.html로 이동하게 연결
-
--->
 	<body>
 		<div id="body_container">
 			<header id="header" class="display_flex_center">
@@ -143,7 +132,7 @@ COVAC로고 누르면 메인 화면으로 이동하게 링크 기능 추가
 					$("#nav ul li a").removeClass("selected")
 					$("#nav ul.low_depth").hide()
 				}
-		
+
 				$("#nav ul li a.none_low_depth").click(function () {
 					handleCommonNavFunction()
 					$(this).addClass("selected")
